@@ -6,10 +6,11 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>HR Management</title>
 <link rel="stylesheet" href="generalstyle.css">
 </head>
 <body>
+ <jsp:include page="adminHeader.jsp"></jsp:include>
  <div class="tr-login">
   <h1>Employee Register Form</h1>
   <form action="<%= request.getContextPath() %>/register" method="post">
@@ -50,7 +51,7 @@
 	<%
  try{
 	 Class.forName("com.mysql.jdbc.Driver").newInstance();
-	 Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/employee?useSSL=false", "root", "");
+	 Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/cosmet?useSSL=false", "root", "");
      String sql = "select * from employee;";
      PreparedStatement stmt = con.prepareStatement(sql);
      ResultSet rs = stmt.executeQuery();

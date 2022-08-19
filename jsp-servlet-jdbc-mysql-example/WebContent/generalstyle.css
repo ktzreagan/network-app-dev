@@ -164,6 +164,10 @@ header{
 }
 nav{
     padding: 0;
+    color: rgba(0, 0, 0, 0.692);
+    background-color: #3b0000;
+     
+    
 }
 .logo{
     cursor: pointer;
@@ -176,16 +180,17 @@ nav h4{
     display: inline;
     padding: 0px 25px;
     border-radius: 7px;
+    color: rgba(0, 0, 0, 0.692);
 }
 nav h4 a{
     transition: all 0.3s ease 0s;
     text-decoration: none;
-    color: #ffff;
+    color: rgba(0, 0, 0, 0.692);
     margin:0px;
     font: 400 17px Ubuntu,Arial;
 }
 nav h4 a:hover {
-    color: #1a0836;
+    color: #4a1c94;
 }
 /*
 nav{

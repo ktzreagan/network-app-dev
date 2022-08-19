@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.math.*;
 //import java.sql.Statement;
 
 //import net.javaguides.employeemanagement.model.Employee;
@@ -22,14 +23,18 @@ public class EmployeeUpdate {
         
         
         try (Connection connection = DriverManager
-            .getConnection("jdbc:mysql://localhost:3306/employee?useSSL=false", "root", "");
+            .getConnection("jdbc:mysql://localhost:3306/cosmet?useSSL=false", "root", "");
 
             // Step 2:Create a statement using connection object
             PreparedStatement preparedStatement = connection.prepareStatement(UPDATE_USERS_SQL)) {
 
-            String category = "2";
+            
             
             for(int i=1;i<=count;i++) {
+            double r= Math.floor(Math.random()*(5-1)+1);
+            int p = (int)r;
+            String category = ""+p+"";
+            	
             String id= ""+i+"";
 			preparedStatement.setString(1, category);
 			preparedStatement.setString(2, id);

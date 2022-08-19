@@ -48,7 +48,7 @@ public class EmployeeUpdateServlet extends HttpServlet {
     	 try { 
 			DriverManager.registerDriver(new com.mysql.jdbc.Driver());
          //Getting the connection
-         String mysqlUrl = "jdbc:mysql://localhost/employee";
+         String mysqlUrl = "jdbc:mysql://localhost/cosmet";
          Connection con = DriverManager.getConnection(mysqlUrl, "root", "");
          System.out.println("Connection established......");
          //Creating the Statement object
